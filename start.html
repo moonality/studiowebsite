@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studio — Visual & Brand Designer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    >
+    <link rel="stylesheet" href="https://use.typekit.net/hnv6npe.css">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="canvas">
+      <header class="top-bar">
+        <span class="tag">FIADSGN</span>
+        <span class="tag tag-center">VISUAL &amp; BRAND DESIGNER</span>
+        <span class="tag tag-right">STUDENT</span>
+      </header>
+
+      <nav class="utility-nav" aria-label="Secondary navigation">
+        <a href="#">CATALOGUE</a>
+        <a href="#">ABOUT</a>
+        <a href="#">SAY HELLO</a>
+      </nav>
+
+      <main class="hero">
+        <section class="statement-block">
+          <div class="guide guide-horizontal" aria-hidden="true"></div>
+          <div class="guide guide-horizontal-short" aria-hidden="true"></div>
+          <div class="guide guide-vertical" aria-hidden="true"></div>
+          <div class="guide guide-vertical-short" aria-hidden="true"></div>
+
+            <h1 class="statement">
+              <div class="statement-line">I design the world your</div>
+              <div class="statement-line">brand lives in</div>
+              <div class="statement-line">— not just how it looks</div>
+              <div class="statement-line">on the surface.</div>
+            </h1>
+        </section>
+      </main>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const animationDuration = 2500;
+        setTimeout(() => {
+          sessionStorage.setItem("seamlessTransition", "true");
+          window.location.href = "index.html";
+        }, animationDuration);
+      });
+    </script>
+  </body>
+</html>
+
+
