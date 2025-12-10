@@ -625,10 +625,9 @@ a {
 .site-footer-dark {
   background: #050505;
   color: #f4f4f4;
-  width: 100vw;
-  max-width: 100%;
-  margin-left: calc(50% - 50vw);
-  margin-right: calc(50% - 50vw);
+  width: calc(100% + 2 * clamp(1.5rem, 6vw, 5rem));
+  margin-left: calc(-1 * clamp(1.5rem, 6vw, 5rem));
+  margin-right: calc(-1 * clamp(1.5rem, 6vw, 5rem));
   margin-top: clamp(4rem, 8vw, 5rem);
   padding: clamp(5rem, 12vw, 9rem) clamp(1.5rem, 6vw, 5rem) clamp(6rem, 14vw, 10rem);
   position: relative;
@@ -695,10 +694,9 @@ a {
 }
 
 .site-footer-contact {
-  width: 100vw;
-  max-width: 100%;
-  margin-left: calc(50% - 50vw);
-  margin-right: calc(50% - 50vw);
+  width: calc(100% + 2 * clamp(1.5rem, 6vw, 5rem));
+  margin-left: calc(-1 * clamp(1.5rem, 6vw, 5rem));
+  margin-right: calc(-1 * clamp(1.5rem, 6vw, 5rem));
   padding: clamp(2rem, 6vw, 3.5rem) clamp(1.5rem, 6vw, 5rem) clamp(3rem, 8vw, 4.5rem);
   display: flex;
   flex-wrap: wrap;
