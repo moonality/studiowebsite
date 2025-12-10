@@ -31,6 +31,11 @@
   box-sizing: border-box;
 }
 
+html {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
 body {
   margin: 0;
   min-height: 100vh;
@@ -41,6 +46,7 @@ body {
   letter-spacing: -0.01em;
   position: relative;
   overflow-x: hidden;
+  max-width: 100%;
   --grid-start: clamp(24rem, 65vh, 48rem);
   --grid-height: 100vh;
 }
@@ -109,6 +115,8 @@ a {
   margin-bottom: clamp(4rem, 10vw, 7rem);
   align-items: center;
   font-family: var(--font-family, "Neue Haas Grotesk", Arial, sans-serif);
+  max-width: 100%;
+  overflow: hidden;
 }
 
 .top-bar .tag:first-child {
@@ -190,7 +198,7 @@ a {
 
 .guide-horizontal-short {
   top: clamp(4rem, 12vw, 10.5rem);
-  left: clamp(-17.4rem, -24vw, -14rem);
+  left: clamp(-17.5rem, -24vw, -14rem);
   width: clamp(18rem, 43vw, 33rem);
   height: 2px;
   transform: scaleX(0);
@@ -618,11 +626,14 @@ a {
   background: #050505;
   color: #f4f4f4;
   width: 100vw;
-  margin-left: calc(-50vw + 50%);
+  max-width: 100%;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
   margin-top: clamp(4rem, 8vw, 5rem);
   padding: clamp(5rem, 12vw, 9rem) clamp(1.5rem, 6vw, 5rem) clamp(6rem, 14vw, 10rem);
   position: relative;
   overflow: hidden;
+  box-sizing: border-box;
 }
 
 .site-footer-dark::before,
@@ -685,7 +696,9 @@ a {
 
 .site-footer-contact {
   width: 100vw;
-  margin-left: calc(-50vw + 50%);
+  max-width: 100%;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
   padding: clamp(2rem, 6vw, 3.5rem) clamp(1.5rem, 6vw, 5rem) clamp(3rem, 8vw, 4.5rem);
   display: flex;
   flex-wrap: wrap;
@@ -695,6 +708,7 @@ a {
   letter-spacing: 0.35em;
   font-size: 0.85rem;
   border-top: 1px solid rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
 }
 
 .site-footer-contact-left {
@@ -767,6 +781,73 @@ a {
   100% {
     opacity: 1;
     transform: scaleY(1);
+  }
+}
+
+@media (max-width: 1400px) {
+  .top-bar {
+    column-gap: clamp(0.5rem, 2vw, 1.5rem);
+  }
+
+  .tag-center {
+    transform: translateX(-25%);
+    font-size: 0.65rem;
+  }
+
+  .tag-right {
+    transform: translateX(-70%);
+    font-size: 0.65rem;
+  }
+
+  .guide-horizontal {
+    left: clamp(-10rem, -15vw, -8rem);
+    width: clamp(32rem, 65vw, 44rem);
+  }
+
+  .guide-horizontal-short {
+    left: clamp(-10rem, -16vw, -8rem);
+    width: clamp(14rem, 35vw, 26rem);
+  }
+
+  .guide-vertical {
+    left: clamp(-12rem, -15vw, -6rem);
+  }
+
+  .statement-line:first-child {
+    --line-offset: -8vw;
+  }
+
+  .statement-line:nth-child(2) {
+    --line-offset: 10vw;
+  }
+
+  .statement-line:nth-child(3) {
+    --line-offset: -8vw;
+  }
+
+  .statement-line:nth-child(4) {
+    --line-offset: 10vw;
+  }
+
+  .project-line-vertical {
+    left: clamp(-12rem, -15vw, -6rem);
+  }
+
+  .project-line-horizontal {
+    left: clamp(-15rem, -15vw, -8rem);
+    width: clamp(24rem, 38vw, 34rem);
+  }
+
+  .project-title {
+    left: clamp(-8rem, -15vw, -8rem);
+  }
+
+  .project-meta {
+    left: clamp(-4rem, -8vw, -6rem);
+  }
+
+  :root {
+    --project-footer-left: clamp(-8rem, -12vw, -4rem);
   }
 }
 
