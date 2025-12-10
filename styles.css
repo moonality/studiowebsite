@@ -625,14 +625,12 @@ a {
 .site-footer-dark {
   background: #050505;
   color: #f4f4f4;
-  width: calc(100% + 2 * clamp(1.5rem, 6vw, 5rem));
-  margin-left: calc(-1 * clamp(1.5rem, 6vw, 5rem));
-  margin-right: calc(-1 * clamp(1.5rem, 6vw, 5rem));
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
   margin-top: clamp(4rem, 8vw, 5rem);
   padding: clamp(5rem, 12vw, 9rem) clamp(1.5rem, 6vw, 5rem) clamp(6rem, 14vw, 10rem);
   position: relative;
   overflow: hidden;
-  box-sizing: border-box;
 }
 
 .site-footer-dark::before,
@@ -694,9 +692,8 @@ a {
 }
 
 .site-footer-contact {
-  width: calc(100% + 2 * clamp(1.5rem, 6vw, 5rem));
-  margin-left: calc(-1 * clamp(1.5rem, 6vw, 5rem));
-  margin-right: calc(-1 * clamp(1.5rem, 6vw, 5rem));
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
   padding: clamp(2rem, 6vw, 3.5rem) clamp(1.5rem, 6vw, 5rem) clamp(3rem, 8vw, 4.5rem);
   display: flex;
   flex-wrap: wrap;
@@ -706,7 +703,6 @@ a {
   letter-spacing: 0.35em;
   font-size: 0.85rem;
   border-top: 1px solid rgba(0, 0, 0, 0.1);
-  box-sizing: border-box;
 }
 
 .site-footer-contact-left {
